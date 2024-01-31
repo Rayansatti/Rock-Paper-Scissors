@@ -62,6 +62,31 @@ function playGame(){
  playGame();
 console.log(rounds);
 
+function win(rounds){
+        let count = 0;
+        let winnerKey = 'you win!';
+        
+
+        for(target of rounds){
+               
+                if(target == winnerKey){
+                        count++;
+                }
+               
+        };
+
+        if(count > 2){
+                console.log('You are the winner!');
+        }else{
+                console.log('You are the winner!');
+        }
+
+        console.log(count); 
+      
+}
+
+win(rounds);
+
 
 
 
