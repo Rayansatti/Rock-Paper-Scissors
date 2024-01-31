@@ -60,24 +60,28 @@ function playGame(){
        }while(rounds.length < 5);
 }
  playGame();
-console.log(rounds);
+//console.log(rounds);
 
 
 //fiinds the number of times "you win!" was mentionned and returns the winner
 function win(rounds){
         let count = 0;
+        let countSec = 0;
         let winnerKey = 'you win!';
+        let winnerComputer = 'computer win!';
         
 
         for(target of rounds){
                
                 if(target == winnerKey){
                         count++;
+                }else if(target == winnerComputer){
+                        countSec++;
                 }
                
         };
 
-        if(count > 2){
+        if(count > countSec){
                 console.log('You are the winner!');
         }else{
                 console.log('Computer is the winner!');
