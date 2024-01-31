@@ -13,16 +13,25 @@ const array = ['rock' , 'paper', 'scissors'];
 
 const result = getComputerChoice(array);
 
-console.log(result)
+//console.log(result)
 
 //gets input from the user and converts it to lower case
-let playerSelection = prompt("Enter your choice!").toLowerCase();
+
+
+function reprompt(){
+        playerSelection;
+        getComputerChoice(array);
+
+}
 
 
 //plays round in the game 
-//it takes 2 arguments the player selection and the result from getcomputerchoice(array)
+//it takes 1 argument the result from getcomputerchoice(array)
 //compares between them and return a value
-function playRound(playerSelection, result){
+
+function playRound(result){
+        playerSelection = prompt("Enter your choice!").toLowerCase();
+
         if (playerSelection === result){
                 return("tie");
         }else if(playerSelection == "rock" && result == "paper"){
@@ -41,7 +50,19 @@ function playRound(playerSelection, result){
 
 }
 
-console.log(playRound(playerSelection, result))
+//array to keep rounds results
+let rounds = [];
+
+//it repeats game rounds for 5 times
+function playGame(){
+       do{
+        rounds.push(playRound(result));
+       }while(rounds.length < 5);
+}
+ playGame();
+console.log(rounds);
+
+
 
 
 
