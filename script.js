@@ -62,6 +62,8 @@ function playGame(){
  playGame();
 console.log(rounds);
 
+
+//fiinds the number of times "you win!" was mentionned and returns the winner
 function win(rounds){
         let count = 0;
         let winnerKey = 'you win!';
@@ -78,7 +80,7 @@ function win(rounds){
         if(count > 2){
                 console.log('You are the winner!');
         }else{
-                console.log('You are the winner!');
+                console.log('Computer is the winner!');
         }
 
         console.log(count); 
